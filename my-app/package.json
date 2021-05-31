@@ -1,18 +1,16 @@
 {
-  "name": "app",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@azure/communication-identity": "^1.0.0",
-    "@azure/communication-react": "^1.0.0-beta.1",
-    "@fluentui/react": "^8.16.0",
+    "@fluentui/react": "^7.155.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@types/react-router-dom": "^5.1.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -42,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.8"
   }
 }
