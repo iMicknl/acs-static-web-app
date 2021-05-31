@@ -1,0 +1,23 @@
+{
+  "name": "acs-static-web-app",
+  "version": "1.0.0",
+  "description": "Azure Communication Services meets Azure Static Web Apps.",
+  "main": "index.js",
+  "scripts": {
+    "start": "swa start ./app/build --api ./api",
+    "dev": "swa start http://localhost:3000 --api ./api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iMicknl/acs-static-web-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iMicknl/acs-static-web-app/issues"
+  },
+  "homepage": "https://github.com/iMicknl/acs-static-web-app#readme",
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^0.4.0"
+  }
+}

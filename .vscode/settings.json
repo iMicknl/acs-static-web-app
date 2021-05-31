@@ -1,0 +1,10 @@
+{
+    "staticWebApps.appSubpath": "/app",
+    "staticWebApps.apiSubpath": "api",
+    "staticWebApps.outputSubpath": "build",
+    "azureFunctions.deploySubpath": "api/bin/Release/net5.0/publish",
+    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.projectRuntime": "~3",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "publish"
+}

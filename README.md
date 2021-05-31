@@ -1,2 +1,13 @@
 # acs-static-web-app
-Azure Communication Services meets Azure Static Web Apps
+
+Azure Communication Services meets Azure Static Web Apps.
+
+## app
+
+React app created with Create React App.
+
+## api
+
+Azure Functions
+
+npm i -g azure-functions-core-tools@3 --unsafe-perm true
