@@ -11,7 +11,7 @@ export type ContainerProps = {
   fluentTheme?: PartialTheme | Theme;
 };
 
-const isTeamsMeetingLink = (link: string): boolean => link.startsWith('https://teams.microsoft.com/l/meetup-join');
+// const isTeamsMeetingLink = (link: string): boolean => link.startsWith('https://teams.microsoft.com/l/meetup-join');
 
 export const CallContainer = (props: ContainerProps): JSX.Element => {
   const [adapter, setAdapter] = useState<CallAdapter>();
