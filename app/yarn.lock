@@ -64,10 +64,10 @@
     events "^3.0.0"
     tslib "^2.0.0"
 
-"@azure/communication-react@^1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@azure/communication-react/-/communication-react-1.0.0-beta.1.tgz#4f6d07adea26e6f8b795f4051c43705248d056de"
-  integrity sha512-XGTS7e2Tf9mvrS+gABy71FwH6VtGQoi0J/Tjf4+O+B/R9t9vPs5K5oZ1GO6JJ5dMNHx8K1E0vd6M3WrY6xFy1w==
+"@azure/communication-react@^1.0.0-alpha-20210602.2043.0":
+  version "1.0.0-alpha-20210602.2043.0"
+  resolved "https://registry.yarnpkg.com/@azure/communication-react/-/communication-react-1.0.0-alpha-20210602.2043.0.tgz#da3533354148659c077831b53ebbcbb6bc14dae5"
+  integrity sha512-rzcTFEmHVSIxKLGmTT/fiV9hYKxAYkL3JMzgngkH4oEizo5zuubFYOewL6qgtVoWSyA8OtUwJ10xE0MhBJO1BQ==
   dependencies:
     "@azure/communication-calling" "1.0.1-beta.1"
     "@azure/communication-chat" "1.0.0"

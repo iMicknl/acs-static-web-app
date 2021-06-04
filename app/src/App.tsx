@@ -7,6 +7,10 @@ import {
 } from "react-router-dom";
 import { CallContainer } from "./CallContainer";
 import { ProgressIndicator } from '@fluentui/react/lib/ProgressIndicator';
+import { Stack, Text, Link, FontWeights, IStackTokens } from '@fluentui/react';
+
+const boldStyle = { root: { fontWeight: FontWeights.semibold } };
+const stackTokens: IStackTokens = { childrenGap: 15 };
 
 export default function App() {
   return (
@@ -38,8 +42,25 @@ function useQuery() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
-      <ProgressIndicator label="Example title" description="Example description" />
+      <Stack
+      horizontalAlign="center"
+      verticalAlign="center"
+      verticalFill
+      styles={{
+        root: {
+          width: '960px',
+          margin: '0 auto',
+          textAlign: 'center',
+          color: '#605e5c',
+        },
+      }}
+      tokens={stackTokens}
+    >
+      <Text variant="xxLarge" styles={boldStyle}>
+        Home
+      </Text>
+      <Text variant="large">Join call</Text>
+    </Stack>
     </div>
   );
 }
@@ -49,8 +70,28 @@ function Join() {
 
   return (
     <div>
-      <h2>Join call {query.get("id")}</h2>
+      <Stack
+      horizontalAlign="start"
+      verticalAlign="center"
+      verticalFill
+      styles={{
+        root: {
+          width: '960px',
+          margin: '0 auto',
+          textAlign: 'center',
+          color: '#605e5c',
+        },
+      }}
+      tokens={stackTokens}
+    >
+      <Text variant="xxLarge" styles={boldStyle}>
+        Home
+      </Text>
+
       <CallContainer />
+
+      <Text variant="large">Join call {query.get("id")}</Text>
+    </Stack>
     </div>
   );
 }

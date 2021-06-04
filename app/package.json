@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@azure/communication-identity": "^1.0.0",
-    "@azure/communication-react": "^1.0.0-beta.1",
+    "@azure/communication-react": "^1.0.0-alpha-20210602.2043.0",
     "@fluentui/react": "^8.16.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
