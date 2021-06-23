@@ -12,15 +12,13 @@
     "url": "git+https://github.com/iMicknl/acs-static-web-app.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iMicknl/acs-static-web-app/issues"
   },
   "homepage": "https://github.com/iMicknl/acs-static-web-app#readme",
   "devDependencies": {
-    "@azure/static-web-apps-cli": "^0.4.0"
+    "@azure/static-web-apps-cli": "^0.6.1"
   },
-  "dependencies": {
-    "react-router-dom": "^5.2.0"
-  }
+  "dependencies": {}
 }
