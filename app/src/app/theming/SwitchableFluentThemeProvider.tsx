@@ -34,7 +34,7 @@ const defaultThemes: ThemeCollection = {
 /**
  * Interface for React useContext hook containing the FluentTheme and a setter to switch themes
  */
-interface SwitchableFluentThemeContext {
+interface ISwitchableFluentThemeContext {
   /**
    * Currently chosen theme.
    * @defaultValue lightTheme
@@ -72,7 +72,7 @@ const defaultTheme: NamedTheme = defaultThemes.Light;
 /**
  * React useContext for FluentTheme state of SwitchableFluentThemeProvider
  */
-const SwitchableFluentThemeContext = createContext<SwitchableFluentThemeContext>({
+const SwitchableFluentThemeContext = createContext<ISwitchableFluentThemeContext>({
   currentTheme: defaultTheme,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
   setCurrentTheme: (theme: NamedTheme) => {},
@@ -108,7 +108,7 @@ export const SwitchableFluentThemeProvider = (props: SwitchableFluentThemeProvid
   const initialTheme = themeStore[themeFromStorage || defaultTheme.name] ?? defaultTheme;
   const [currentTheme, _setCurrentTheme] = useState<NamedTheme>(initialTheme);
 
-  const state = useMemo<SwitchableFluentThemeContext>(
+  const state = useMemo<ISwitchableFluentThemeContext>(
     () => ({
       currentTheme,
       setCurrentTheme: (namedTheme: NamedTheme): void => {
@@ -139,4 +139,4 @@ export const SwitchableFluentThemeProvider = (props: SwitchableFluentThemeProvid
 /**
  * React hook for programmatically accessing the switchable fluent theme.
  */
-export const useSwitchableFluentTheme = (): SwitchableFluentThemeContext => useContext(SwitchableFluentThemeContext);
+export const useSwitchableFluentTheme = (): ISwitchableFluentThemeContext => useContext(SwitchableFluentThemeContext);

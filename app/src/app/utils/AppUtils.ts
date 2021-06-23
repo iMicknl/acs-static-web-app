@@ -16,7 +16,7 @@ export const fetchTokenResponse = async (): Promise<any> => {
       return responseAsJson;
     }
   }
-  throw 'Invalid token response';
+  throw new Error('Invalid token response');
 };
 
 /**
