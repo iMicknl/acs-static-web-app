@@ -68,14 +68,59 @@
       }
     },
     {
-      "type": "func",
-      "dependsOn": "build",
+      "type": "shell",
+      "label": "npm build",
+      "command": "npm run build",
+      "dependsOn": "npm install",
+      "problemMatcher": "$tsc",
       "options": {
-        "cwd": "${workspaceFolder}/api/bin/Debug/net5.0"
-      },
+        "cwd": "${workspaceFolder}/api_node"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "npm install",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/api_node"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "npm prune",
+      "command": "npm prune --production",
+      "dependsOn": "npm build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}/api_node"
+      }
+    },
+    {
+      "type": "func",
       "command": "host start",
+      "problemMatcher": "$func-python-watch",
       "isBackground": true,
-      "problemMatcher": "$func-dotnet-watch"
+      "dependsOn": "pipInstall",
+      "options": {
+        "cwd": "${workspaceFolder}/api_python"
+      }
+    },
+    {
+      "label": "pipInstall",
+      "type": "shell",
+      "osx": {
+        "command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+      },
+      "windows": {
+        "command": "${config:azureFunctions.pythonVenv}/Scripts/python -m pip install -r requirements.txt"
+      },
+      "linux": {
+        "command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+      },
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}/api_python"
+      }
     }
   ]
 }

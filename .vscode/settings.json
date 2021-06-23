@@ -2,9 +2,13 @@
     "staticWebApps.appSubpath": "/app",
     "staticWebApps.apiSubpath": "api",
     "staticWebApps.outputSubpath": "build",
-    "azureFunctions.deploySubpath": "api/bin/Release/net5.0/publish",
-    "azureFunctions.projectLanguage": "C#",
+    "azureFunctions.deploySubpath": "api_python",
+    "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~3",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "publish"
+    "azureFunctions.preDeployTask": "npm prune",
+    "azureFunctions.postDeployTask": "npm install",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "python.pythonPath": "api_python/.venv/bin/python3"
 }
