@@ -10,6 +10,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@azure/communication-calling": "^1.1.0-beta.2",
     "@azure/communication-common": "1.0.0",
     "@azure/communication-identity": "1.0.0",
     "@azure/communication-react": "^1.0.0-alpha-20210623.9.0",
