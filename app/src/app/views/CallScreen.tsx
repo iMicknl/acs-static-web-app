@@ -50,6 +50,21 @@ export const CallScreen = (props: CallScreenProps): JSX.Element => {
     };
   }, [callLocator, displayName, token, userId, onCallEnded, onCallError]);
 
+  // useEffect(() => {
+  //   function showWarning(e: any) {
+  //     console.log("WARNING")
+  //     e.preventDefault();
+  //     return '';
+  //   }
+ 
+  //   window.addEventListener('beforeunload', showWarning);
+ 
+  //   return () => {
+  //      window.removeEventListener('beforeunload', showWarning);
+  //   }
+  // })
+  
+
   if (!adapter) {
     return <Spinner label={'Creating adapter'} ariaLive="assertive" labelPosition="top" />;
   }
