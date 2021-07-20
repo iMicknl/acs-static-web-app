@@ -18,6 +18,8 @@
     "@fluentui/react": "~8.17.2",
     "@fluentui/react-icons-northstar": "^0.51.2",
     "@fluentui/react-northstar": "^0.51.2",
+    "@microsoft/applicationinsights-react-js": "^3.1.4",
+    "@microsoft/applicationinsights-web": "^2.6.4",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
     "@types/react-dom": "^17.0.8",

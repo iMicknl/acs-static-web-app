@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react';
 import { initializeIcons, Spinner } from '@fluentui/react';
 import { GroupCallLocator, GroupLocator, TeamsMeetingLinkLocator } from '@azure/communication-calling';
 import { CommunicationUserIdentifier } from '@azure/communication-common';
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { reactPlugin, appInsights } from './telemetry-provider';
 
 import {
   fetchTokenResponse,
@@ -143,4 +145,5 @@ const App = (): JSX.Element => {
   }
 };
 
-export default App;
+// export default App;
+export default withAITracking(reactPlugin, App);
