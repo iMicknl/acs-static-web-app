@@ -26,6 +26,7 @@ import { HomeScreen } from './views/HomeScreen';
 import { UnsupportedBrowserPage } from './views/UnsupportedBrowserPage';
 
 initializeIcons();
+appInsights.loadAppInsights();
 
 type AppPages = 'home' | 'call' | 'endCall' | 'callError' | 'teamsMeetingDenied' | 'removed';
 
@@ -62,6 +63,7 @@ const App = (): JSX.Element => {
     console.log('ACS Calling sample: This is experimental behaviour');
   }
 
+  
   switch (page) {
     case 'home': {
       // Show a simplified join home screen if joining an existing call
