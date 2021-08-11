@@ -8,6 +8,7 @@ import { CallAdapter, CallComposite, createAzureCommunicationCallAdapter } from 
 import { CommunicationUserIdentifier } from '@azure/communication-common';
 import { refreshTokenAsync } from '../utils/refreshToken';
 import { useSwitchableFluentTheme } from '../theming/SwitchableFluentThemeProvider';
+import { createAutoRefreshingCredential } from '../utils/credential';
 
 export interface CallScreenProps {
   token: string;
@@ -27,13 +28,12 @@ export const CallScreen = (props: CallScreenProps): JSX.Element => {
   useEffect(() => {
     (async () => {
 
-      const adapter = await createAzureCommunicationCallAdapter(
-        userId,
-        token,
-        callLocator,
-        displayName,
-        refreshTokenAsync(userId.communicationUserId)
-      );
+      const adapter = await createAzureCommunicationCallAdapter({
+        userId: { kind: 'communicationUser', communicationUserId: userId.communicationUserId },
+        displayName: displayName,
+        credential: createAutoRefreshingCredential(userId.communicationUserId, token),
+        locator: callLocator
+      });
       adapter.on('callEnded', () => {
         onCallEnded();
       });
