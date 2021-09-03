@@ -6,7 +6,7 @@ import { Spinner } from '@fluentui/react';
 import { GroupCallLocator, TeamsMeetingLinkLocator } from '@azure/communication-calling';
 import { CallAdapter, CallComposite, createAzureCommunicationCallAdapter } from '@azure/communication-react';
 import { CommunicationUserIdentifier } from '@azure/communication-common';
-import { refreshTokenAsync } from '../utils/refreshToken';
+// import { refreshTokenAsync } from '../utils/refreshToken';
 import { useSwitchableFluentTheme } from '../theming/SwitchableFluentThemeProvider';
 import { createAutoRefreshingCredential } from '../utils/credential';
 
