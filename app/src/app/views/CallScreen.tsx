@@ -51,8 +51,12 @@ export const CallScreen = (props: CallScreenProps): JSX.Element => {
   }, [callLocator, displayName, token, userId, onCallEnded, onCallError]);
 
   if (!adapter) {
-    return <Spinner label={'Creating adapter'} ariaLive="assertive" labelPosition="top" />;
+    return <Spinner label={'Loading...'} ariaLive="assertive" labelPosition="top" />;
   }
+  
+  const options = { mobileView: true, callControls: {
+    compressedMode: false, screenShareButton: false
+  }}
 
-  return <CallComposite adapter={adapter} fluentTheme={currentTheme.theme} callInvitationURL={window.location.href} />;
+  return <CallComposite adapter={adapter} fluentTheme={currentTheme.theme} callInvitationURL={window.location.href} options={options} />;
 };
